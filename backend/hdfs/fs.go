@@ -93,7 +93,7 @@ func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, e
 
 	options := hdfs.ClientOptions{
 		Addresses:           opt.Namenode,
-		UseDatanodeHostname: false,
+		UseDatanodeHostname: true,
 	}
 
 	if opt.ServicePrincipalName != "" {
